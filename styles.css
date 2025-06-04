@@ -498,7 +498,7 @@ input:focus, textarea:focus {
 
 .main-content {
     margin-left: 270px;
-    width: calc(100vw - 270px);
+    width: calc(100% - 270px);
     padding: 48px 32px 32px 32px;
     min-height: 100vh;
     background: transparent;
@@ -548,7 +548,7 @@ input:focus, textarea:focus {
     }
     .main-content {
         margin-left: 70px;
-        width: calc(100vw - 70px);
+        width: calc(100% - 70px);
         padding: 32px 4vw 10vw 4vw;
     }
     .cyber-section {
@@ -565,7 +565,7 @@ input:focus, textarea:focus {
     }
     .sidebar-nav {
         position: static;
-        width: 100vw;
+        width: 100%;
         height: auto;
         flex-direction: row;
         align-items: center;
@@ -613,7 +613,7 @@ input:focus, textarea:focus {
     }
     .main-content {
         margin-left: 0;
-        width: 100vw;
+        width: 100%;
         padding: 18px 2vw 18px 2vw;
     }
     .cyber-section {
@@ -716,7 +716,7 @@ input:focus, textarea:focus {
 
 .main-content {
     margin-left: 270px;
-    width: calc(100vw - 270px);
+    width: calc(100% - 270px);
     padding: 48px 32px 32px 32px;
     min-height: 100vh;
     background: transparent;
