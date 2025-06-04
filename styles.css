@@ -367,8 +367,8 @@ input:focus, textarea:focus {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: 1;
     background-image: url('images/lic-logo-01.jpg');
     background-size: 300px;
@@ -562,6 +562,7 @@ input:focus, textarea:focus {
 @media (max-width: 600px) {
     body {
         flex-direction: column;
+        align-items: center;
     }
     .sidebar-nav {
         position: static;
@@ -573,7 +574,7 @@ input:focus, textarea:focus {
         border-right: none;
         border-bottom: 2px solid var(--primary-color);
         box-shadow: 0 2px 24px 0 #00ffea33;
-        padding: 8px 0 8px 0;
+        padding: 8px 16px;
     }
     .sidebar-profile, .sidebar-logo {
         margin: 0;
@@ -583,25 +584,27 @@ input:focus, textarea:focus {
         flex-direction: row;
         align-items: center;
         margin-bottom: 0;
+        flex-grow: 1;
     }
     .sidebar-photo {
         width: 36px;
         height: 36px;
-        margin: 0 8px 0 0;
+        margin: 0 12px 0 0;
     }
     .sidebar-nav nav ul {
         display: flex;
         flex-direction: row;
         margin: 0;
         width: auto;
+        gap: 8px;
     }
     .sidebar-nav nav ul li {
-        margin: 0 6px;
+        margin: 0;
         width: auto;
     }
     .sidebar-nav nav ul li a {
         padding: 8px 10px;
-        font-size: 0.98rem;
+        font-size: 0.9rem;
         border-left: none;
         border-bottom: 3px solid transparent;
     }
@@ -614,16 +617,29 @@ input:focus, textarea:focus {
     .main-content {
         margin-left: 0;
         width: 100%;
-        padding: 18px 2vw 18px 2vw;
+        padding: 18px 4vw;
+        gap: 32px;
     }
     .cyber-section {
-        padding: 18px 2vw 18px 2vw;
+        padding: 18px 4vw;
     }
     .section-title {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        text-align: center;
     }
     .icon-list li {
-        font-size: 1.01rem;
+        font-size: 1rem;
+        justify-content: center;
+        text-align: left;
+    }
+    .icon-list .icon {
+        margin-right: 8px;
+    }
+    .beema-interest-section .section-title {
+        font-size: 1.8rem;
+    }
+    .beema-interest-section p {
+        font-size: 1rem;
     }
 }
 
@@ -714,18 +730,6 @@ input:focus, textarea:focus {
     padding: 0;
 }
 
-.main-content {
-    margin-left: 270px;
-    width: calc(100% - 270px);
-    padding: 48px 32px 32px 32px;
-    min-height: 100vh;
-    background: transparent;
-    transition: margin 0.3s;
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-}
-
 .cyber-section {
     margin: 0 auto 48px auto;
     max-width: 800px;
@@ -793,11 +797,4 @@ input:focus, textarea:focus {
     border: 3px solid var(--primary-color);
     box-shadow: 0 0 18px var(--secondary-color);
     margin-bottom: 12px;
-}
-
-.lic-photo-bg-anim img {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-    filter: drop-shadow(0 0 8px rgba(0, 255, 234, 0.4));
 } 
