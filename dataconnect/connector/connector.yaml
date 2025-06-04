@@ -1,5 +1,0 @@
-connectorId: default
-generate:
-  kotlinSdk:
-    outputDir: ..\..\dataconnect-generated\kotlin
-    package: connectors.default
