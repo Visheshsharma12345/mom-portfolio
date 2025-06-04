@@ -417,9 +417,42 @@ input:focus, textarea:focus {
     text-shadow: 0 0 8px rgba(255, 0, 200, 0.5);
 }
 
+.header-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.header-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.header-nav a:hover::after {
+    width: 100%;
+}
+
 .lang-switcher {
     display: flex;
     gap: 8px;
+    margin-left: 20px;
 }
 
 .lang-btn {
@@ -717,4 +750,95 @@ input:focus, textarea:focus {
     border: 3px solid var(--primary-color);
     box-shadow: 0 0 18px var(--secondary-color);
     margin-bottom: 12px;
+}
+
+.mobile-nav-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 30, 0.98);
+    box-shadow: 0 2px 12px rgba(0, 255, 234, 0.1);
+    z-index: 15;
+    display: none;
+    padding: 10px 0;
+}
+
+.mobile-nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.mobile-nav-menu li {
+    margin: 10px 0;
+}
+
+.mobile-nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+/* Media query to show/hide hamburger menu and mobile nav */
+@media (min-width: 901px) {
+    .hamburger-menu {
+        display: none;
+    }
+    .mobile-nav-menu {
+        display: none !important;
+    }
+    .header-nav {
+        display: block;
+    }
+}
+
+@media (max-width: 900px) {
+    .header-nav {
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        padding: 10px 15px;
+    }
+    .hamburger-menu {
+        font-size: 1.5rem;
+        margin-right: 10px;
+    }
+    .site-initials {
+        font-size: 1.5rem;
+    }
+    .lang-btn {
+        padding: 3px 8px;
+        font-size: 0.8rem;
+    }
+    .main-content {
+        padding: 15px;
+        gap: 20px;
+    }
+    body {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 900px) {
+    .mobile-nav-menu.active {
+        display: block;
+    }
+    body.mobile-nav-open {
+        padding-top: 300px;
+    }
 } 
