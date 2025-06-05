@@ -245,8 +245,14 @@ input:focus, textarea:focus {
 }
 
 /* Footer */
-.cyber-footer {
-    display: none;
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: rgba(10, 10, 30, 0.9);
+    color: var(--text-color);
+    font-size: 0.9rem;
+    border-top: 1.5px solid var(--primary-color);
 }
 
 /* Animations */
