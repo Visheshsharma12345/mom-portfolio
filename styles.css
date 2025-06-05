@@ -928,7 +928,7 @@ input:focus, textarea:focus {
 }
 
 .testimonial-card {
-    background: rgba(0, 20, 40, 0.7);
+    background: rgb(0, 20, 40);
     border: 1.5px solid var(--accent-color);
     border-radius: 12px;
     padding: 25px;
@@ -971,10 +971,10 @@ input:focus, textarea:focus {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 20px;
-    color: var(--text-color);
+    color: #ffffff;
     font-style: italic;
     flex-grow: 1;
-    color: #f0f0f0;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .testimonial-author {
