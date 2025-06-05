@@ -269,6 +269,28 @@ footer {
     color: var(--primary-color);
 }
 
+.developer-signature {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    font-family: 'Orbitron', sans-serif;
+    opacity: 0.6;
+    text-shadow: 0 0 5px rgba(0, 191, 255, 0.3);
+    transition: opacity 0.3s ease;
+    animation: signature-glow 3s infinite alternate;
+}
+
+.developer-signature:hover {
+    opacity: 1;
+}
+
+@keyframes signature-glow {
+    0% { text-shadow: 0 0 5px rgba(0, 191, 255, 0.3); }
+    100% { text-shadow: 0 0 15px rgba(0, 191, 255, 0.8); }
+}
+
 /* Animations */
 @keyframes glitch {
     0% {
