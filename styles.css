@@ -255,6 +255,20 @@ footer {
     border-top: 1.5px solid var(--primary-color);
 }
 
+.footer-social-links {
+    margin-top: 15px;
+}
+
+.footer-social-links .social-icon {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.footer-social-links .social-icon:hover {
+    color: var(--primary-color);
+}
+
 /* Animations */
 @keyframes glitch {
     0% {
