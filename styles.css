@@ -246,10 +246,7 @@ input:focus, textarea:focus {
 
 /* Footer */
 .cyber-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 60px;
-    border-top: 1px solid var(--primary-color);
+    display: none;
 }
 
 /* Animations */
@@ -556,63 +553,56 @@ input:focus, textarea:focus {
 /* Adjust responsive styles for smaller screens */
 @media (max-width: 600px) {
     .site-header {
-        padding: 10px 15px;
+        padding: 10px;
     }
     .hamburger-menu {
         font-size: 1.5rem;
-        margin-right: 10px;
     }
     .site-initials {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .lang-btn {
-        padding: 3px 8px;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     .main-content {
-        padding: 15px;
-        gap: 20px;
+        padding: 10px;
     }
     .profile-photo-container img {
         width: 120px;
         height: 120px;
     }
     .profile-section h2 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
     .profile-title {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     .profile-branch {
-        font-size: 0.9rem;
-    }
-    .contact-info p {
         font-size: 1rem;
     }
+    .contact-info p {
+        font-size: 0.9rem;
+    }
     .contact-info .icon {
-         font-size: 1.2em;
+        font-size: 1rem;
     }
     .cyber-section {
-        padding: 20px;
-        margin-bottom: 20px;
+        padding: 15px;
     }
     .section-title {
         font-size: 1.5rem;
-        margin-bottom: 15px;
     }
     .icon-list li {
-        font-size: 1rem;
-        justify-content: center;
-        text-align: left;
+        font-size: 0.9rem;
     }
     .icon-list .icon {
-         margin-right: 6px;
+        font-size: 1.2rem;
     }
     .beema-interest-section .section-title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
     .beema-interest-section p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -697,29 +687,95 @@ input:focus, textarea:focus {
 }
 
 @media (max-width: 900px) {
+    .header-nav {
+        display: none;
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .mobile-nav-menu.active {
+        display: block;
+    }
+    
+    body.mobile-nav-open {
+        overflow: hidden;
+    }
+    
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 
 @media (max-width: 600px) {
-    .section-title {
+    .site-header {
+        padding: 10px;
+    }
+    
+    .hamburger-menu {
         font-size: 1.5rem;
-        text-align: center;
     }
-    .icon-list li {
-        font-size: 1rem;
-        justify-content: center;
-        text-align: left;
+    
+    .site-initials {
+        font-size: 1.2rem;
     }
-    .icon-list .icon {
-        margin-right: 8px;
+    
+    .lang-btn {
+        font-size: 0.9rem;
     }
-    .beema-interest-section .section-title {
+    
+    .main-content {
+        padding: 10px;
+    }
+    
+    .profile-photo-container img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .profile-section h2 {
         font-size: 1.8rem;
     }
-    .beema-interest-section p {
+    
+    .profile-title {
+        font-size: 1.1rem;
+    }
+    
+    .profile-branch {
         font-size: 1rem;
+    }
+    
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+    
+    .contact-info .icon {
+        font-size: 1rem;
+    }
+    
+    .cyber-section {
+        padding: 15px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .icon-list li {
+        font-size: 0.9rem;
+    }
+    
+    .icon-list .icon {
+        font-size: 1.2rem;
+    }
+    
+    .beema-interest-section .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .beema-interest-section p {
+        font-size: 0.9rem;
     }
 }
 
@@ -812,22 +868,19 @@ input:focus, textarea:focus {
 
 @media (max-width: 600px) {
     .site-header {
-        padding: 10px 15px;
+        padding: 10px;
     }
     .hamburger-menu {
         font-size: 1.5rem;
-        margin-right: 10px;
     }
     .site-initials {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .lang-btn {
-        padding: 3px 8px;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     .main-content {
-        padding: 15px;
-        gap: 20px;
+        padding: 10px;
     }
     body {
         padding-top: 50px;
