@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     // Animate nav links
-    gsap.from('.cyber-nav li', {
+    gsap.from('.header-nav li', {
         y: -30,
         opacity: 0,
         duration: 0.8,
@@ -58,18 +58,72 @@ setInterval(() => {
 
 // Language Switcher
 function setLanguage(lang) {
-    document.querySelectorAll('[data-en]').forEach(el => {
-        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-            el.placeholder = el.getAttribute('data-' + lang) || el.placeholder;
-        } else if (el.tagName === 'BUTTON') {
-            el.textContent = el.getAttribute('data-' + lang) || el.textContent;
-        } else {
-            el.textContent = el.getAttribute('data-' + lang) || el.textContent;
+    try {
+        document.querySelectorAll('[data-en]').forEach(el => {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = el.getAttribute('data-' + lang) || el.placeholder;
+            } else if (el.tagName === 'BUTTON') {
+                el.textContent = el.getAttribute('data-' + lang) || el.textContent;
+            } else {
+                el.textContent = el.getAttribute('data-' + lang) || el.textContent;
+            }
+        });
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        const activeBtn = document.getElementById('lang-' + lang);
+        if (activeBtn) {
+            activeBtn.classList.add('active');
         }
-    });
-    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
+    } catch (error) {
+        console.error('Error switching language:', error);
+    }
 }
 
-document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
-document.getElementById('lang-hi').addEventListener('click', () => setLanguage('hi')); 
+// Add event listeners for language switching
+const langEnBtn = document.getElementById('lang-en');
+const langHiBtn = document.getElementById('lang-hi');
+
+if (langEnBtn) {
+    langEnBtn.addEventListener('click', () => setLanguage('en'));
+}
+if (langHiBtn) {
+    langHiBtn.addEventListener('click', () => setLanguage('hi'));
+}
+
+// Mobile navigation toggle
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const mobileNavMenu = document.querySelector('.mobile-nav-menu');
+
+if (hamburgerMenu && mobileNavMenu) {
+    hamburgerMenu.addEventListener('click', () => {
+        mobileNavMenu.classList.toggle('active');
+        document.body.classList.toggle('mobile-nav-open');
+    });
+
+    // Close mobile nav when a link is clicked
+    document.querySelectorAll('.mobile-nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNavMenu.classList.remove('active');
+            document.body.classList.remove('mobile-nav-open');
+        });
+    });
+}
+
+// Form submission handling
+const contactForm = document.getElementById('contactForm');
+const beemaInterestForm = document.getElementById('beemaInterestForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Add your form submission logic here
+        console.log('Contact form submitted');
+    });
+}
+
+if (beemaInterestForm) {
+    beemaInterestForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Add your form submission logic here
+        console.log('Beema interest form submitted');
+    });
+} 
